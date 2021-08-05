@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,3 +35,6 @@ Route::get("/products/{name}/{id}", [ProductsController::class, "show"])->where(
 //Pages Route
 Route::get("/", [PagesController::class, "index"]);
 Route::get("/about", [PagesController::class, "about"]);
+
+//Posts Route
+Route::get("/posts", [PostsController::class, "index"]);
